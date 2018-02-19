@@ -1,0 +1,2 @@
+module ArticlestudsHelper
+end

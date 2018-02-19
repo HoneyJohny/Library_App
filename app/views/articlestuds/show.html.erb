@@ -1,0 +1,16 @@
+<p>
+  <strong>name:</strong>
+  <%= @articlestud.title%>
+</p>
+ 
+<p>
+  <strong>section:</strong>
+  <%= @articlestud.text %>
+</p>
+<p>
+  <strong>address:</strong>
+  <%= @articlestud.discp %>
+</p>
+
+<%= link_to 'Edit', edit_articlestud_path(@articlestud) %> |
+<%= link_to 'Back', articlestuds_path %>

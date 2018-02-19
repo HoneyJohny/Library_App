@@ -1,0 +1,35 @@
+<center><h1>List of Students</h1>
+<br>
+<table border=1>
+  <tr>
+    <th>NAME</th>
+    <th>SECTION</th>
+
+    <th>ADDRESS</th>
+    <th>BOOK BORROWED </th>
+    <th colspan="10"></th>
+  </tr>
+ <br>
+  <% @articlestuds.each do |articlestud| %>
+    <tr>
+      <td><%= articlestud.title%></td>
+      <td><%= articlestud.text %></td>
+      <td><%= truncate(articlestud.discp, :length => 10)%>
+      <td>
+        <% if articlestud.article %>
+	  <%= link_to articlestud.article.title, article_path(articlestud.article) %> 
+        <% end %>
+      </td>
+</td>
+      <td>&nbsp<t> </t><%= link_to 'Show', articlestud_path(articlestud) %></td>
+      <td>&nbsp<t> </t><%= link_to 'Edit', edit_articlestud_path(articlestud) %></td>
+     
+    </tr>
+  <% end %>
+</table>
+<br>
+<br><%= link_to 'New Student', new_articlestud_path %>
+<br>
+<br>
+<br>
+<td><%= link_to 'Home', welcome_index_path %></td></center>
